@@ -9,15 +9,11 @@ public class MainFrame extends JFrame {
 
         setTitle("Predictive Bin Overflow");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        // Use proper layout BEFORE adding components
         setLayout(new BorderLayout(10, 10));
 
-        // Panels
         ControlPanel control = new ControlPanel();
         RankingTable table = new RankingTable();
 
-        // Force control panel to have visible height
         control.setPreferredSize(new Dimension(800, 120));
 
         // Add components
@@ -29,10 +25,7 @@ public class MainFrame extends JFrame {
         // Wire controller
         new java_gui.controller.MainController(control, table);
 
-        // Let Swing compute correct size
         pack();
-
-        // Then enforce a minimum size so it never collapses
         setMinimumSize(new Dimension(900, 600));
         setLocationRelativeTo(null);
         setVisible(true);

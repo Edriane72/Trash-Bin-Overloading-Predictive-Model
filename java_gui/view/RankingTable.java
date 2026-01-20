@@ -33,7 +33,7 @@ public class RankingTable extends JTable {
         });
     }
 
-    // ---------- Color full / warning bins ----------
+    // warning bins 
     class FillRenderer extends DefaultTableCellRenderer {
 
         @Override

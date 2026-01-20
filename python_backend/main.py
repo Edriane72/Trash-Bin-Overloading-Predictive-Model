@@ -52,7 +52,7 @@ def clear_state():
 
 
 def collect_full(state):
-    # Empty ONLY bins that are already full
+    # Empty only the bins that are already full
     for b in state:
         if state[b] >= CAPACITY:
             state[b] = 0
@@ -60,7 +60,6 @@ def collect_full(state):
 
 
 def advance_one_hour(state, scenario):
-    # MUCH SLOWER accumulation (realistic)
 
     for bin_id in state:
 
@@ -71,7 +70,7 @@ def advance_one_hour(state, scenario):
         weight = scenario_weight(bin_id, scenario)
 
         arrivals = base * weight * random.uniform(3, 6)
-        added = arrivals * random.uniform(1, 3)   # 🔥 WAS 5–10 BEFORE (WAY TOO FAST)
+        added = arrivals * random.uniform(1, 3) 
 
         state[bin_id] += added
         state[bin_id] = min(state[bin_id], CAPACITY)
@@ -110,7 +109,6 @@ def run_simulation(scenario):
 
     os.makedirs("output", exist_ok=True)
 
-    # Save ranking + current fill %
     with open("output/results.csv", "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["BinID", "Rank", "Probability", "Fill"])
