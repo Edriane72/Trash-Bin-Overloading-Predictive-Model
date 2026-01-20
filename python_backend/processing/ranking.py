@@ -1,6 +1,5 @@
 def compute_ranking(events):
 
-    # Sort by time (earliest overflow first)
     events.sort()
 
     results = []
