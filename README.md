@@ -20,9 +20,9 @@ It uses a Python backend for the simulation and a Java Swing GUI to display rank
 - The GUI buttons control the simulation (run, +1 hour, clear, collect).
 
 Project Structure
-python_backend/ – Python simulation logic
-java_gui/       – Java Swing GUI (view, controller, model)
-output/         – generated CSV files (results and bin state)
+- python_backend/ – Python simulation logic
+- java_gui/       – Java Swing GUI (view, controller, model)
+- output/         – generated CSV files (results and bin state)
 
 Make sure Python is installed and added to your system PATH.
 
