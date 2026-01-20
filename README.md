@@ -4,8 +4,8 @@ This project simulates trash bin filling over time and predicts which bins are m
 It uses a Python backend for the simulation and a Java Swing GUI to display rankings and bin status.
 
 ### Notes
-This project was created for learning and demonstration purposes.
-The simulation logic is simplified and not based on real sensor data.
+- This project was created for learning and demonstration purposes.
+- The simulation logic is simplified and not based on real sensor data.
 
 ## Features
 - Run simulations with different scenarios (normal, sunny, rain, etc.)
